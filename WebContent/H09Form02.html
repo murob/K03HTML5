@@ -201,6 +201,10 @@
 		 -->
 		<script>
 		function textArea() {
+			/*
+			textarea는 value속성이 없으나 javascript에서 접근할때는
+			value속성을 통해 값을 가져오거나 변경할 수 있다.
+			*/
 			document.getElementById("intro").value = "내용을 바꿉니다.";
 			var v = document.getElementById("intro").value;
 			alert(v);
@@ -210,7 +214,11 @@
         <h3>textarea태그</h3>
         <textarea name="intro" id="intro" cols="70" rows="5">내용은 여기에 입력됩니다.</textarea>
         <input type="button" onclick="textArea();" value="난 버튼" />
-
+	
+		<!-- 
+			-웹브라우저에서는 보이지 않으나 서버로 전송이 필요한 경우 사용한다.
+			-주로 회원정보 수정이나 게시물 수정에서 사용된다.
+		 -->
         <h3>type="hidden"</h3>
         <form action="">
             <input type="hidden" name="member_id" value="kosmo" />
